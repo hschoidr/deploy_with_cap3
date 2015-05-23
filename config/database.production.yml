@@ -48,7 +48,11 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: deploy_with_cap3_production
-  username: <%= ENV['DEPLOY_USERNAME'] %>
-  password: <%= ENV['DEPLOY_PASSWORD'] %>
+   adapter: mysql2
+   encoding: utf8
+   reconnect: false
+   database: deploy_with_cap3_production
+   pool: 5
+   username: <%= ENV['DEPLOY_USERNAME'] %>
+   password: <%= ENV['DEPLOY_PASSWORD'] %>
+   host: localhost
