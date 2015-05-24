@@ -6,7 +6,7 @@ set :repo_url, "git@github.com:hschoidr/#{fetch(:application)}.git"
 set :deploy_to, "/home/deployer/apps/#{fetch(:application)}"
 
 set :rbenv_type, :user # or :system, depends on your rbenv setup
-set :rbenv_custom_path, '/home/deployer/.rbenv/'
+# set :rbenv_custom_path, '/home/deployer/.rbenv/'
 set :rbenv_ruby, '2.2.2'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
@@ -29,6 +29,7 @@ Rake::Task['deploy:assets:backup_manifest'].clear_actions
 namespace :deploy do
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
+      execute :sudo, :unicorn, 'restart'
       # Here we can do anything such as:
       # within release_path do
       #   execute :rake, 'cache:clear'
