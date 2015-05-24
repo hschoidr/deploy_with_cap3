@@ -12,7 +12,7 @@ set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rben
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all # default values
 
-set :rails_env, "production"
+# set :rails_env, "production"
 
 # Default value for :linked_files is []
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
@@ -20,7 +20,7 @@ set :config_files, fetch(:linked_files)
 set :pty, true
 set :keep_releases, 5
 
-set :default_env , { path: '$PATH:/sbin' }
+# set :default_env , { path: '$PATH:/sbin' }
 
 before 'deploy:check:linked_files', 'config:push'
 
