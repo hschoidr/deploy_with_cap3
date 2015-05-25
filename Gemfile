@@ -33,8 +33,8 @@ gem 'unicorn'
 gem 'capistrano-rails', group: :development
 gem 'capistrano-rbenv' # required
 gem 'capistrano-rbenv-install'
-gem 'capistrano-unicorn-nginx'
-# gem 'capistrano-unicorn-nginx', github: 'hschoidr/capistrano-unicorn-nginx'
+# gem 'capistrano-unicorn-nginx'
+gem 'capistrano-unicorn-nginx', github: 'hschoidr/capistrano-unicorn-nginx'
 gem 'capistrano-upload-config'
 gem 'capistrano-safe-deploy-to'
 gem 'capistrano-ssh-doctor'

@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/hschoidr/capistrano-unicorn-nginx.git
+  revision: d708c03eea4e1183fbc5893a0531f89451d4997c
+  specs:
+    capistrano-unicorn-nginx (3.3.3)
+      capistrano (>= 3.1)
+      sshkit (>= 1.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -71,9 +79,6 @@ GEM
       capistrano (>= 3.0)
     capistrano-ssh-doctor (1.0.0)
       capistrano (>= 3.1)
-    capistrano-unicorn-nginx (3.3.3)
-      capistrano (>= 3.1)
-      sshkit (>= 1.2.0)
     capistrano-upload-config (0.6.0)
       capistrano (>= 3.0)
     coffee-rails (4.1.0)
@@ -199,7 +204,7 @@ DEPENDENCIES
   capistrano-rbenv-install
   capistrano-safe-deploy-to
   capistrano-ssh-doctor
-  capistrano-unicorn-nginx
+  capistrano-unicorn-nginx!
   capistrano-upload-config
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
