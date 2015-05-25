@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/hschoidr/capistrano-unicorn-nginx.git
-  revision: d708c03eea4e1183fbc5893a0531f89451d4997c
+  revision: 1ad2305808132067746f7fcebec9b293b7d0db8c
   specs:
     capistrano-unicorn-nginx (3.3.3)
       capistrano (>= 3.1)
